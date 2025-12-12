@@ -1,0 +1,4 @@
+cta_api_env/
+__pycache__/
+*.pyc
+
