@@ -1,17 +1,18 @@
 import requests
 import json
 from datetime import datetime
+from config import API_KEY_STORE
 
 # Install requests: pip install requests
 
 # Replace "YOUR_API_KEY" with your actual CTA Bus Tracker API key.
-API_KEY = "zMsecVhMjXHzxYza6cXHACc3B" 
+API_KEY = API_KEY_STORE
 STOP_ID = "11024"# Stop ID for Diversey & Southport EB
 #1126
 ROUTE = "76"
 
 # -- CORRECTED ENDPOINT FOR V3, HTTPS, and JSON format --
-API_URL = f"https://ctabustracker.com/bustime/api/v3/getpredictions?key={API_KEY}&stpid={STOP_ID}&format=json&top=3"
+API_URL = f"https://ctabustracker.com/bustime/api/v3/getpredictions?key={API_KEY}&stpid={STOP_ID}&format=json&top=5"
 
 def get_predictions_json_mvp(url):
     """
